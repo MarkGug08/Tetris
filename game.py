@@ -46,6 +46,13 @@ class Game:
             self.current_block.move(-1, 0)
             self.lock_block()
 
+    def getState(self):
+
+        grigliaAttuale = self.grid.get_grid()
+        bloccoAttuale = self.getCurrentBlock()
+        bloccoNext = self.next_block
+
+
     def lock_block(self):
         tiles = self.current_block.get_cell_positions()
         for position in tiles:
@@ -94,3 +101,9 @@ class Game:
             self.next_block.draw(screen, 255, 280)
         else:
             self.next_block.draw(screen, 270, 270)
+
+    def getCurrentBlock(self):
+        return self.current_block
+
+    def getNextBlock(self):
+        return self.next_block
