@@ -41,7 +41,7 @@ class Grid:
             self.grid[row + num_rows][column] = self.grid[row][column]
             self.grid[row][column] = 0
 
-    def clear_full_rows(self):
+    def clear_full_rows(self):  # permette di pulire la riga quando piena
         completed = 0
         for row in range(self.num_rows - 1, 0, -1):
             if self.is_row_full(row):

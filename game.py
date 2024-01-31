@@ -52,6 +52,9 @@ class Game:
         bloccoAttuale = self.getCurrentBlock()
         bloccoNext = self.next_block
 
+        statoAttualeGioco = [grigliaAttuale, bloccoAttuale, bloccoNext]
+
+        return statoAttualeGioco
 
     def lock_block(self):
         tiles = self.current_block.get_cell_positions()

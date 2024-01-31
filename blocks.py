@@ -13,11 +13,8 @@ class LBlock(Block):
         }
         self.move(0, 3)
 
-    def get_block_rapresentation(self):
-        return {
-            'id': self.id,
-            'cell_positions': self.get_cell_positions()
-        }
+
+
 
 class JBlock(Block):
     def __init__(self):
